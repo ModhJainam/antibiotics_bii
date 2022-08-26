@@ -31,6 +31,6 @@ for drug, frame in grouped:
 for key in prescriptions:
     prescriptions[key] = prescriptions[key].to_dict()
 with open(outfile, "w") as f:
-    f.write(json.dumps(prescriptions))
+    json.dump(prescriptions, f)
 
 
